@@ -144,21 +144,9 @@ struct ContentView: View {
                             .foregroundColor(.blue)
                     }
                     
-                    GeometryReader { geometry in
-                        ZStack(alignment: .leading) {
-                            Rectangle()
-                                .frame(width: geometry.size.width, height: geometry.size.height)
-                                .opacity(0.3)
-                                .foregroundColor(.blue)
-                            
-                            Rectangle()
-                                .frame(width: min(CGFloat(viewModel.progress) * geometry.size.width, geometry.size.width), height: geometry.size.height)
-                                .foregroundColor(.blue)
-                                .animation(.linear(duration: 0.3), value: viewModel.progress)
-                        }
-                        .cornerRadius(10.0)
-                    }
-                    .frame(height: 20)
+                    ProgressView(value: viewModel.progress)
+                        .progressViewStyle(LinearProgressViewStyle(tint: .blue))
+                        .scaleEffect(x: 1, y: 2, anchor: .center)
                 }
                 .padding(.horizontal, 40)
                 .padding(.bottom, 10)
