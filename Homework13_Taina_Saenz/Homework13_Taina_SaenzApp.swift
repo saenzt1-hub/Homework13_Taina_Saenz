@@ -1,9 +1,7 @@
-//
-//  Homework13_Taina_SaenzApp.swift
-//  Homework13_Taina_Saenz
-//
-//  Created by Taina Saenz on 11/3/25.
-//
+// Taina Saenz
+// Homework 13
+// November 11, 2025
+
 
 import SwiftUI
 
